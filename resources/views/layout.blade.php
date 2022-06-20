@@ -95,12 +95,12 @@
             </header><!-- #masthead -->
         </div>
         
-        <div id="primary" class="content-area">
+        
 
-            <!--<content></content>-->
-            @yield('content')
+        <!--<content></content>-->
+        @yield('content')
 
-        </div><!-- #primary -->
+        
 
         <!--<footer></footer>-->
         @include("elements.footer")

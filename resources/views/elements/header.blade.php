@@ -2,7 +2,7 @@
     <div class="container">
         <div class="header-one-left">
             <div id="logo-first" style="width:160px;">
-                <a href="/" rel="home">
+                <a href="{{URL::to('/')}}" rel="home">
                     <img class="logo-img" src="{{asset('public/frontend/images/logo.png')}}" alt="AutoResQ" data-rjs="2">
                 </a>
             </div>
@@ -28,7 +28,7 @@
                 </aside>
                 <aside id="autoresq_info_widget-3" class="widget header-widget widget_autoresq_info_widget">
                     <div class="ztl-widget-info-3">
-                        <a href="/dang-ky/316">
+                        <a href="{{URL::to('/login')}}">
                             <h2 class="widget-title">ĐĂNG NHẬP</h2>
                             <div class="ztl-widget-info">
                                 <div class="ztl-widget-info-image">
