@@ -14,6 +14,7 @@ class CreateTeamMembersTable extends Migration
     public function up()
     {
         Schema::create('team_members', function (Blueprint $table) {
+            $table->id();
             $table->char('idNguoiDung', 5)->references('idNguoiDung')->on('users');
             $table->char('idDoiCuuHo', 5)->references('idDoiCuuHo')->on('teams');
             $table->timestamps();
