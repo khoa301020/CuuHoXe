@@ -40,5 +40,12 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'idNguoiDung' => 'string',
     ];
+
+    /**
+     * The primary key for the model.
+     * @var string
+     */
+    protected $primaryKey = 'idNguoiDung';
 }

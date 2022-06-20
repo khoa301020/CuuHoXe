@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
     use HasFactory;
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'idDoiCuuHo' => 'string',
+    ];
+
+    /**
+     * The primary key for the model.
+     * @var string
+     */
+    protected $primaryKey = 'idDoiCuuHo';
 }
