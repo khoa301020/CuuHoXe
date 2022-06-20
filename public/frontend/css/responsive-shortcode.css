@@ -1,0 +1,107 @@
+@media only screen and (max-width: 480px) {
+    /*Countdown*/
+    .ztl-countdown .grid h1 {
+        font-size: 40px !important;
+    }
+
+    .ztl-countdown .grid:last-child h1 {
+        font-size: 50px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* Action Responsive */
+    .ztl-announcement .ztl-action {
+        text-align: center;
+    }
+
+    .ztl-announcement .ztl-flex {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .ztl-announcement .content {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    /* Packages */
+    .ztl-package-description {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    /* Announcement */
+    .ztl-announcement .col-lg-9 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .ztl-announcement .ztl-action {
+        height: auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    /* Subscribe */
+    .ztl-subscriber .ztl-col {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .ztl-subscriber .content {
+        padding: 0px;
+    }
+
+    /*Countdown*/
+    .ztl-countdown .grid h1 {
+        font-size: 50px;
+    }
+
+    .ztl-countdown .grid:last-child h1 {
+        font-size: 60px;
+    }
+
+    /*Testimonials*/
+    .ztl-testimonials-carousel .title img {
+        max-width: 48px;
+        max-height: 48px;
+    }
+
+    .ztl-testimonials-carousel .title {
+        font-size: 32px;
+    }
+
+    .ztl-service-item{
+        width:100% !important;
+    }
+}
