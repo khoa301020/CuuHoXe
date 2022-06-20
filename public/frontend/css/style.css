@@ -1228,10 +1228,10 @@ textarea {
     font-size: 14px;
 }
 
-.ztl-breadcrumb-container .trail-items li::after {
+/* .ztl-breadcrumb-container .trail-items li::after {
     content: "\f105";
     font-family: "FontAwesome";
-}
+} */
 
 
 /*--------------------------------------------------------------
@@ -6150,10 +6150,10 @@ blockquote,
     list-style: none;
 }
 
-.trail-items li::after {
+/* .trail-items li::after {
     content: "\002F";
     padding: 0 0.5em;
-}
+} */
 
 .trail-items li:last-of-type::after {
     display: none;

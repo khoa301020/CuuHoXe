@@ -18,10 +18,10 @@
             <div class="menu-main-menu-container">
                 <ul id="menu-main-menu" class="menu">
                     <li id="menu-item-3502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-3502">
-                        <a href="/">Trang chủ</a>
+                        <a href="{{URL::to('/')}}">Trang chủ</a>
                     </li>
                     <li id="menu-item-3353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3353">
-                        <a href="/gioi-thieu">Giới thiệu</a>
+                        <a href="{{URL::to('/introduce')}}">Giới thiệu</a>
                         {{-- <ul class="sub-menu">
                             <li id="menu-item-3510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3510">
                                 <a href="/gioi-thieu">ZuttoRide Việt Nam</a>
@@ -42,7 +42,7 @@
                         <span class="ztl-expand"></span> --}}
                     </li>
                     <li id="menu-item-3353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3353">
-                        <a href="#" onclick="(function(e){e.preventDefault();})(event)">Dịch vụ cứu hộ</a>
+                        <a href="{{URL::to('/service')}}">Dịch vụ cứu hộ</a>
                         {{-- <ul class="sub-menu">
                             <li id="menu-item-6252" class="menu-item menu-item-type-post_type_archive menu-item-object-service menu-item-6252">
                                 <a href="/dich-vu">Cứu hộ</a>
@@ -75,7 +75,7 @@
 
                     
                     <li id="menu-item-3351" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3351">
-                        <a href="/tin-tuc">Tin tức</a>
+                        <a href="{{URL::to('/news')}}">Tin tức</a>
                         {{-- <ul class="sub-menu">
                             <li id="menu-item-3504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3504">
                                 <a href="/tin-cuu-ho">Tin cứu hộ</a>
