@@ -19,15 +19,6 @@ class CreateRolesTable extends Migration
             $table->string('moTa', 256);
             $table->timestamps();
         });
-
-        //create trigger to increment ID
-        // DB::unprepared('
-        //     CREATE TRIGGER `increment_id_vai_tro` BEFORE INSERT ON `roles` FOR EACH ROW BEGIN
-        //         SET @id = (SELECT MAX(idVaiTro) FROM roles) + 1;
-        //         SET new.idVaiTro = @id;
-        //     END
-        // ');
-
     }
 
     /**

@@ -20,7 +20,7 @@ class TaskFactory extends Factory
             'idDoiCuuHo' => 'DC'.strval($this->faker->numberBetween(000, 999)),
             // 'trangThaiNhiemVu' => null,
             'thoiGianNhan' => $this->faker->dateTime,
-            'thoiGianHoanThanh' => $this->faker->dateTime,
+            'thoiGianHoanThanh' => null,
         ];
     }
 }

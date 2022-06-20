@@ -19,17 +19,9 @@ class CreateTasksTable extends Migration
             $table->char('idDoiCuuHo', 5)->references('idDoiCuuHo')->on('teams');
             $table->enum('trangThaiNhiemVu', ['Đã nhận', 'Đang trên đường', 'Đang xử lý', 'Đã hoàn thành', 'Đã hủy'])->default('Đã nhận');
             $table->dateTime('thoiGianNhan');
-            $table->dateTime('thoiGianHoanThanh');
+            $table->dateTime('thoiGianHoanThanh')->nullable();
             $table->timestamps();
         });
-        
-        //create trigger to increment ID
-        // DB::unprepared('
-        //     CREATE TRIGGER `increment_id_nhiem_vu` BEFORE INSERT ON `tasks` FOR EACH ROW BEGIN
-        //         SET @id = (SELECT MAX(idNhiemVu) FROM tasks) + 1;
-        //         SET new.idNhiemVu = @id;
-        //     END
-        // ');
     }
 
     /**

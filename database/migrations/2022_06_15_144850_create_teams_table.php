@@ -18,14 +18,6 @@ class CreateTeamsTable extends Migration
             $table->string('tenDoiCuuHo', 32);
             $table->timestamps();
         });
-
-        //create trigger to increment ID
-        // DB::unprepared('
-        //     CREATE TRIGGER `increment_id_doi_cuu_ho` BEFORE INSERT ON `teams` FOR EACH ROW BEGIN
-        //         SET @id = (SELECT MAX(idDoiCuuHo) FROM teams) + 1;
-        //         SET new.idDoiCuuHo = @id;
-        //     END
-        // ');
     }
 
     /**

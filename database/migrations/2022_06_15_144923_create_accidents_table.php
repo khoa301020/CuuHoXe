@@ -19,7 +19,7 @@ class CreateAccidentsTable extends Migration
             $table->string('viTri', 100);
             $table->string('loaiPhuongTien', 32);
             $table->string('minhChung', 256);
-            $table->enum('trangThaiSuCo', ['Chưa xử lý', 'Đang xử lý', 'Không được tiếp nhận'])->default('Chưa xử lý');
+            $table->enum('trangThaiSuCo', ['Chưa tiếp nhận', 'Đã tiếp nhận', 'Không được tiếp nhận'])->default('Chưa tiếp nhận');
             $table->dateTime('thoiGianGui');
             $table->timestamps();
         });
