@@ -24,6 +24,9 @@ Route::get('/service', function () {
 Route::get('/news', function () {
     return view('pages.news');
 });
+Route::get('/gui_yeu_cau', function () {
+    return view('pages.gui_yeu_cau');
+});
 
 Route::get('/register', function () {
     return view('registration');
