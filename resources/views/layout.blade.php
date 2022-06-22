@@ -77,6 +77,7 @@
     <script type="text/javascript" src="{{asset('public/frontend/js/nivo-lightbox.js')}}"></script>
 
     <link rel="stylesheet" href="{{asset('public/frontend/css/owl.carousel.css')}}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/yeu_cau.css')}}" type="text/css">
 </head>
 <body class="page-template-default page page-id-5779 woocommerce-no-js ztl-sticky-nav wpb-js-composer js-comp-ver-5.6 vc_responsive">
     <div id="ztl-overlay" style="display: none;">

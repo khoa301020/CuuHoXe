@@ -1,0 +1,99 @@
+#primary-yeu-cau{
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+ 
+#primary-yeu-cau form {
+    border: 1px solid #bbbbbb00;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    padding: 0px 100px 0px 50px;
+}
+#primary-yeu-cau h2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+i.fab.fa-app-store-ios {
+    display: block;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+ 
+#primary-yeu-cau label {
+    display: block;
+    font-weight: lighter;
+ 
+}
+#primary-yeu-cau input{
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    outline-style: none;
+}
+#primary-yeu-cau select{
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    outline-style: none;
+    padding: 5px  0px 5px 10px;
+    width: 100%;
+    background-color: #fff;
+}
+#primary-yeu-cau input[type="text"] {
+    padding: 5px 10px;
+    width: 100%;
+}
+ 
+#primary-yeu-cau input#submit {
+    padding: 10px 10px;
+    width: 35%;
+    border-radius: 10px;
+    border: none;
+    bottom: 10px;
+    cursor: pointer;
+    background: #3f5efb;
+    color: #fff;
+    margin: 20px auto;
+}
+#primary-yeu-cau input#submit:hover{
+    background: #00dbde; 
+}
+
+.container-yeu-cau{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imageUpload{
+    margin-top: 20px;
+}
+.fileInfomation{
+    margin-top: 20px;
+}
+#imageUploadInput{
+    display: none;
+}
+#imagePreview{
+    margin-top: 6px;
+    max-width: 100%;
+    max-height: 700px;
+}
+#imageUploadInputBtn, #sendData{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#toado{
+    padding-left: 100px;
+}
