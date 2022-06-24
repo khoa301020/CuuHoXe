@@ -28,6 +28,21 @@ Route::get('/gui_yeu_cau', function () {
     return view('pages.gui_yeu_cau');
 });
 
+// user
+Route::get('/user/profile', function () {
+    return view('pages.user.profile');
+});
+Route::get('/user/request', function () {
+    return view('pages.user.request');
+});
+Route::get('/user/request/detail', function () {
+    return view('pages.user.detail');
+});
+Route::get('/user/password', function () {
+    return view('pages.user.password');
+});
+
+
 Route::get('/register', function () {
     return view('registration');
 });

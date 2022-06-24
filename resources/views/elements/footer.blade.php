@@ -59,14 +59,14 @@
                     <ul class="ztl-social">
                         <li>
                             <div class="ztl-icon"></div>
-                            <a target="_blank" href="https://www.facebook.com/ZuttoRideVN/">
-                                <i class="base-flaticon-facebook"></i>
+                            <a target="_blank" href="">
+                                <img src="{{asset('public/frontend/images/facebook.png')}}" alt="">
                             </a>
                         </li>
                         <li>
                             <div class="ztl-icon"></div>
-                            <a target="_blank" href="https://www.youtube.com/user/JBRMotorcycleVietNam">
-                                <i class="base-flaticon-youtube"></i>
+                            <a target="_blank" href="">
+                                <img src="{{asset('public/frontend/images/youtube.png')}}" alt="">
                             </a>
                         </li>
                         

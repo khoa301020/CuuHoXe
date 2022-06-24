@@ -27,17 +27,28 @@
                     </a>
                 </aside>
                 <aside id="autoresq_info_widget-3" class="widget header-widget widget_autoresq_info_widget">
-                    <div class="ztl-widget-info-3">
-                        <a href="{{URL::to('/login')}}">
-                            <h2 class="widget-title">ĐĂNG NHẬP</h2>
-                            <div class="ztl-widget-info">
-                                <div class="ztl-widget-info-image">
-                                    <img src="{{asset('public/frontend/images/new-user.png')}}">
+                    <div class="ztl-widget-info-3 dropdown">
+                        {{-- <button class="dropbtn" style="background-color: #19448e; border: none;"> --}}
+                            <a href="{{URL::to('/login')}}" style="display: inline-block;">
+                                <h2 class="widget-title">ĐĂNG NHẬP</h2>
+                                <div class="ztl-widget-info">
+                                    <div class="ztl-widget-info-image">
+                                        <img src="{{asset('public/frontend/images/new-user.png')}}">
+                                    </div>
+                                    <span class="ztl-widget-info-description">
+                                        <span style="font-size:12px;color:#f4c70b">ĐĂNG NHẬP</span>
+                                        <br>
+                                        <span style="font-size:20px;font-weight:600">Cứu hộ</span> 
+                                    </span>
                                 </div>
-                                <span class="ztl-widget-info-description">
-                                    <span style="font-size:12px;color:#f4c70b">ĐĂNG NHẬP</span><br><span style="font-size:20px;font-weight:600">Cứu hộ</span> </span>
-                            </div>
-                        </a>
+                            </a>
+                        {{-- </button> --}}
+                        
+                        <div class="dropdown-content" style="a{color: black !important;}">
+                            <a href="{{URL::to('/user/profile')}}">Hồ sơ cá nhân</a>
+                            <a href="{{URL::to('/user/request')}}">Yêu cầu</a>
+                            <a href="{{URL::to('/login')}}">Đăng xuất</a>
+                        </div>
                     </div>
                 </aside>
             </div>
