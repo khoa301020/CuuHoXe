@@ -30,7 +30,7 @@
                 <div class="clearfix"></div>
                <button class="submit-btn">Đăng Ký</button>
             </form>
-            <p><a href="login.blade.php">Đăng nhập</a> vào tài khoản đã có</p>
+            <p><a href="login">Đăng nhập</a> vào tài khoản đã có</p>
                 
             </div>
             <!-- <div class="clear"></div> -->

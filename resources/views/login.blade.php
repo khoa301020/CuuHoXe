@@ -35,7 +35,7 @@
                 <div class="clearfix"></div>
                <button class="submit">Đăng Nhập</button>
             </form>
-            <p><a href="registration.blade.php">Nhấn vào đây</a> nếu bạn chưa có mật khẩu</p>
+            <p><a href="register">Nhấn vào đây</a> nếu bạn chưa có mật khẩu</p>
             <h6><a href="#">Quên mật khẩu?</a></h6>
             </div>
             <img src="resources/img/login.png" alt="login" class="img-login">
