@@ -28,31 +28,36 @@
                 </aside>
                 <aside id="autoresq_info_widget-3" class="widget header-widget widget_autoresq_info_widget">
                     <div class="ztl-widget-info-3 dropdown">
-                        {{-- <button class="dropbtn" style="background-color: #19448e; border: none;"> --}}
+                        @if(Session::has('LoggedUser'))
+                            <a href="{{ route('user.profile') }}" style="display: inline-block;">
+                                <h2 class="widget-title">ĐĂNG NHẬP</h2>
+                                <div class="ztl-widget-info">
+                                    <div class="ztl-widget-info-image">
+                                        {{-- Lấy ảnh User --}}
+                                        <img src="{{asset('public/frontend/images/daidien.png')}}">
+                                    </div>
+                                    <span class="ztl-widget-info-description">
+                                        <span style="font-size:14px;color:#f4c70b">{{Session::get('LoggedUser')}}</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="dropdown-content" style="color: black !important;">
+                                <a href="{{ route('user.profile') }}">Hồ sơ cá nhân</a>
+                                <a href="{{ route('user.request') }}">Yêu cầu</a>
+                                <a href="{{ route('auth.logout') }}">Đăng xuất</a>
+                            </div>
+                        @else
                             <a href="{{URL::to('/login')}}" style="display: inline-block;">
                                 <h2 class="widget-title">ĐĂNG NHẬP</h2>
                                 <div class="ztl-widget-info">
                                     <div class="ztl-widget-info-image">
                                         <img src="{{asset('public/frontend/images/new-user.png')}}">
                                     </div>
-                                    @if(Session::has('LoggedUser'))
-                                        <span class="ztl-widget-info-description">
-                                            <span style="font-size:12px;color:#f4c70b">Xin chào, {{Session::get('LoggedUser')}}</span>
-                                        </span>
-                                    @else
-                                        <span class="ztl-widget-info-description">
-                                            <span style="font-size:18px;font-weight:600"> <a href="{{ route('auth.login') }}">Đăng nhập</a></span>
-                                        </span>
-                                    @endif
+                                    <span class="ztl-widget-info-description">
+                                        <span style="font-size:12px;color:#f4c70b">ĐĂNG NHẬP</span>
+                                    </span>
                                 </div>
                             </a>
-                        {{-- </button> --}}
-                        @if(Session::has('LoggedUser'))
-                        <div class="dropdown-content" style="color: black !important;">
-                            <a href="{{ route('user.profile') }}">Hồ sơ cá nhân</a>
-                            <a href="{{ route('user.request') }}">Yêu cầu</a>
-                            <a href="{{ route('auth.logout') }}">Đăng xuất</a>
-                        </div>
                         @endif
                     </div>
                 </aside>
