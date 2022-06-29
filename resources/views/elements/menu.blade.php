@@ -30,7 +30,7 @@
                         <a href="{{URL::to('/news')}}">Tin tức</a>
                     </li>
                     <li id="menu-item-3353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3353">
-                        <a href="{{URL::to('/gui_yeu_cau')}}">Yêu cầu cứu hộ</a>
+                        <a href="{{URL::to('/request')}}">Yêu cầu cứu hộ</a>
                     </li>
                 </ul>
             </div>

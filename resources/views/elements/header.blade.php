@@ -13,7 +13,7 @@
                 <aside id="autoresq_info_widget-2" class="widget header-widget widget_autoresq_info_widget">
                     <a href="tel:1900969612">
                         <div class="ztl-widget-info-2">
-                            <h2 class="widget-title">PHỤC VỤC 24/24</h2>
+                            <h2 class="widget-title">PHỤC VỤ 24/24</h2>
                             <div class="ztl-widget-info">
                                 <div class="ztl-widget-info-image">
                                     <img src="{{asset('public/frontend/images/24-hours.png')}}">
@@ -44,7 +44,7 @@
                             </a>
                         {{-- </button> --}}
                         
-                        <div class="dropdown-content" style="a{color: black !important;}">
+                        <div class="dropdown-content" style="color: black !important;">
                             <a href="{{URL::to('/user/profile')}}">Hồ sơ cá nhân</a>
                             <a href="{{URL::to('/user/request')}}">Yêu cầu</a>
                             <a href="{{URL::to('/login')}}">Đăng xuất</a>
