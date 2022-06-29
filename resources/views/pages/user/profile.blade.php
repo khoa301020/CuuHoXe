@@ -199,25 +199,37 @@
       <div class="profile-body">
       <form class="form-wrap" action="#">
         <div class="profile-name">
-      <input class="name_user" id="name_user" style="font-size:25px;margin:auto;background:none;margin-left: 45 px;
-" value="van.hoan.2512">
-<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" style="margin-left: -100px;">
+      <p class="name_user" id="name_user" style="font-size:25px;margin:auto;background:none;margin-left: 45 px;
+" >{{Session::get('LoggedUser')->username}}</p>
+<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" style="margin-left: -75px;">
                         <path d="M8.54 0L6.987 1.56l3.46 3.48L12 3.48M0 8.52l.073 3.428L3.46 12l6.21-6.18-3.46-3.48" fill="#9B9B9B" fill-rule="evenodd"></path>
                     </svg>
     </div>                               <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <label for="email">Họ và tên</label>
-                                                    <input style=" padding: 10px 15px;margin-left:10px;" class="input1" id="name" name="name" type="text" value="Nguyễn Văn Hoàn" >
+                                                    <input style=" padding: 10px 15px;margin-left:10px;" class="input1" id="name" name="name" type="text" value="{{Session::get('LoggedUser')->hoVaTen}}" >
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <label for="phone number">Email</label>
+                                                    <input style=" padding: 10px 15px;margin-left:10px;color:black" class="input1" name="phone" type="email" value="{{Session::get('LoggedUser')->email}}" >
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <label for="phone number">Số điện thoại</label>
-                                                    <input style=" padding: 10px 15px;margin-left:10px;color:black" class="input1" id="phone_number" name="phone" type="phone number" value="0384747474" >
+                                                    <input style=" padding: 10px 15px;margin-left:10px;color:black" class="input1" name="phone" type="tel" value="{{Session::get('LoggedUser')->soDienThoai}}" >
                                                 </div>
                                             </div>
-                                            <div class="radio-content">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <label for="phone number">Ngày sinh</label>
+                                                    <input style=" padding: 10px 15px;margin-left:10px;color:black" class="input1" name="birthday" type="date" value="{{Session::get('LoggedUser')->ngaySinh}}" >
+                                                </div>
+                                            </div>
+                                            <!-- <div class="radio-content">
                                                 <div class="form-radio">
                                                     <label style="float:left;padding-left: 50px;" class="form-radio-label" for="pwd">Giới tính</label>
                                                     <div class="form-check">
@@ -231,7 +243,7 @@
                                                     <label class="form-check-label" for="gtNu">Nữ</label>
                                                         </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                            
                                             <div class="col-lg-12">
                                                 <div class="form-group">

@@ -1,3 +1,4 @@
+@include('sweetalert::alert')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,12 +37,6 @@
                     </div>
                     @endif
 
-                    @if(Session::get('success'))
-                    <div class="alert alert-success">
-                        {{ Session::get('success') }}
-                    </div>
-                    @endif
-
                     @csrf
                     <h5>Thông tin đăng nhập</h5>
                     <input type="text" class="ggg" name="username" placeholder="Tên đăng nhập*" required="true">
@@ -51,7 +46,7 @@
                     <div class="clearfix"></div>
                     <button type="submit" class="submit">Đăng Nhập</button>
                 </form>
-                <p><a href="register">Nhấn vào đây</a> nếu bạn chưa có mật khẩu</p>
+                <p><a href="register">Nhấn vào đây</a> nếu bạn chưa có tài khoản</p>
                 <h6><a href="#">Quên mật khẩu?</a></h6>
             </div>
             <img src="{{ asset('resources/img/login.png') }}" alt="login" class="img-login">

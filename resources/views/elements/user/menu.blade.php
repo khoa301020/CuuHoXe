@@ -6,7 +6,7 @@
             </div>
         </a>
         <div class="miwGmI">
-            <div class="mC1Llc">van.hoan.2512</div>
+            <div class="mC1Llc">{{ Session::get('LoggedUser')->username}}</div>
             <div>
                 <a class="_78QHr1" href="{{URL::to('/user/profile')}}">
                     <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;">

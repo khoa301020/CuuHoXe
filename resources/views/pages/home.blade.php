@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+@include('sweetalert::alert')
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <picture>

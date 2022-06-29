@@ -37,7 +37,7 @@
                                         <img src="{{asset('public/frontend/images/daidien.png')}}">
                                     </div>
                                     <span class="ztl-widget-info-description">
-                                        <span style="font-size:14px;color:#f4c70b">{{Session::get('LoggedUser')}}</span>
+                                        <span style="font-size:14px;color:#f4c70b">{{Session::get('LoggedUser')->hoVaTen}}</span>
                                     </span>
                                 </div>
                             </a>

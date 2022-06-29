@@ -38,15 +38,29 @@
         <div>
             <div class="tF2pJg">
                 <div>
+                    @if(count($accidents) > 0)
+                    @foreach($accidents as $accident)
                     <div class="_6nAGBW">
                         <div class="_1ox39j">
                             <div class="_9bLyA+">
                                 <img width="17" height="16" class="Vqonym" src="{{asset('public/frontend/images/doicuuho.png')}}" alt="">
-                                <div class="mzsqa6">Đội cứu hộ DCH1</div>
+                                <div class="mzsqa6">
+                                    <?php
+                                    if ($accident->trangThaiSuCo == "Đã tiếp nhận") {
+                                        $task = DB::table('tasks')->where('idSuCo', $accident->idSuCo)->first();
+                                        echo "Đội cứu hộ ".$task->idDoiCuuHo;
+                                    } else if ($accident->trangThaiSuCo == "Không được tiếp nhận") {
+                                        echo "Không được tiếp nhận";
+                                    } else {
+                                        echo "Chờ tiếp nhận";
+                                        
+                                    }
+                                    ?>
+                                </div>
                             </div>
                             <div class="WPNwG4">
                                 <div class="RcKSvW">
-                                    <a class="_2GgWAA" href="{{URL::to('/user/request/detail')}}">
+                                    <a class="_2GgWAA" href="{{ route('user.detail', $accident->idSuCo) }}">
                                         <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" class="shopee-svg-icon icon-free-shipping-line">
                                             <g>
                                                 <line fill="none" stroke-linejoin="round" stroke-miterlimit="10" x1="8.6" x2="4.2" y1="9.8" y2="9.8"></line>
@@ -57,7 +71,16 @@
                                                 <polyline fill="none" points="9.9 3.8 14 3.8 14.5 10.2 11.9 10.2" stroke-linejoin="round" stroke-miterlimit="10"></polyline>
                                             </g>
                                         </svg>
-                                        <span class="_0vCgDb"> Cứu hộ thành công</span>
+                                        <span class="_0vCgDb">
+                                            <?php
+                                            if ($accident->trangThaiSuCo == "Đã tiếp nhận") {
+                                                $task = DB::table('tasks')->where('idSuCo', $accident->idSuCo)->first();
+                                                echo $task->trangThaiNhiemVu;
+                                            } else {
+                                                echo $accident->trangThaiSuCo;
+                                            }
+                                            ?>
+                                        </span>
                                     </a>
                                 </div>
                             </div>
@@ -85,7 +108,7 @@
                                                                 </g>
                                                             </svg>
                                                         </div>
-                                                        <div class="shopee-image__content" style="background-image: url({{asset('public/frontend/images/xemayhong.jpg')}});">
+                                                        <div class="shopee-image__content" style="background-image: url({{ $accident->minhChung }});">
                                                             <div class="shopee-image__content--blur"> </div>
                                                         </div>
                                                     </div>
@@ -93,18 +116,19 @@
                                                 <div class="tODfT4">
                                                     <div>
                                                         <div class="QJqUaT">
-                                                            <span class="WVc4Oc">Xe máy bị hỏng, không nổ máy</span>
+                                                            <span class="WVc4Oc">{{ $accident->loaiPhuongTien }}</span>
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div class="qGisqd">Dịch vụ: Kéo xe</div>
-                                                        <div class="_9ca9GU">14:21 16-06-2022</div>
+                                                        <div class="qGisqd">{{ $accident->viTri }}</div>
+                                                        <div class="_9ca9GU">
+                                                            <?php
+                                                            $date = date_create($accident->thoiGianGui);
+                                                            $date = date_format($date, 'H:i:s d/m/Y');
+                                                            echo $date;
+                                                            ?>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="+QRFJX">
-                                                <div>
-                                                    <span class="ghw9hb igidiy">₫218.000</span>
                                                 </div>
                                             </div>
                                         </span>
@@ -113,14 +137,16 @@
                                 </div>
                             </div>
                         </a>
-                        <div class="oPVPPp"></div>
+                        <!-- <div class="oPVPPp"></div>  -->
                     </div>
+                    @endforeach
+                    @endif
                 </div>
-                <div class="CqYika">
+                <!-- <div class="CqYika">
                     <div class="oDBmi- n012K3"> </div>
                     <div class="oDBmi- b-VPB8"> </div>
-                </div>
-                <div class="_1ERzqw">
+                </div> -->
+                <!-- <div class="_1ERzqw">
                     <div class="cLwmWY"></div>
                     <div class="NIZAp8 pw0xMx">
                         <div class="_8vTqu9">
@@ -129,14 +155,13 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 </div>
 <script>
-    window.onload = function()
-    {
+    window.onload = function() {
         var profile = document.getElementById("profile");
         var request = document.getElementById("request");
         var password = document.getElementById("password");

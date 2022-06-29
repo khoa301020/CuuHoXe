@@ -20,7 +20,7 @@ use App\Http\Middleware\AuthCheck;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/introduce', function () {
     return view('pages.introduce');
 });
@@ -43,6 +43,8 @@ Route::group(['middleware' => 'authCheck'], function () {
     Route::get('/user/request/detail', [UserController::class, 'requestDetail'])->name('user.detail');
 
     Route::get('/user/password', [UserController::class, 'password'])->name('user.password');
+
+    Route::get('/user/requestPage', [UserController::class, 'requestPage'])->name('user.requestPage');
 });
 
 // login
@@ -53,8 +55,11 @@ Route::get('/register', [AuthController::class, 'register'])->name('auth.registe
 Route::post('/login/check', [AuthController::class, 'check'])->name('auth.check');
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
+Route::post('/auth/createUser', [AuthController::class, 'createUser'])->name('auth.createUser');
+
 // admin
-Route::group(['middleware' => ['AuthCheck']], function () {
+Route::group(['middleware' => ['authorization']], function () {
+
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
     Route::get('/admin/service', [AdminController::class, 'service'])->name('admin.service');
@@ -64,6 +69,8 @@ Route::group(['middleware' => ['AuthCheck']], function () {
     Route::get('/admin/task', [AdminController::class, 'task'])->name('admin.task');
 
     Route::get('/admin/news', [AdminController::class, 'news'])->name('admin.news');
+
+    Route::get('/admin/team/delete', [AdminController::class, 'deleteTeam'])->name('admin.team.delete');
 });
 
 //Route::get('/login','LoginController@index');
