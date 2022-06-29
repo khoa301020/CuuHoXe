@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','HomeController@index');
-Route::get('/trang-chu','HomeController@index');
+Route::get('/',[HomeController::class, 'index']);
 Route::get('/introduce', function () {
     return view('pages.introduce');
 });
@@ -24,8 +26,8 @@ Route::get('/service', function () {
 Route::get('/news', function () {
     return view('pages.news');
 });
-Route::get('/gui_yeu_cau', function () {
-    return view('pages.gui_yeu_cau');
+Route::get('/request', function () {
+    return view('pages.request');
 });
 
 // user
@@ -42,11 +44,30 @@ Route::get('/user/password', function () {
     return view('pages.user.password');
 });
 
+// login
+Route::get('/login',[AuthController::class, 'login'])->name('auth.login');
 
-Route::get('/register', function () {
-    return view('registration');
+Route::get('/register',[AuthController::class, 'register'])->name('auth.register');
+
+Route::get('/login/success', function () {
+    return view('auth.success');
 });
-Route::get('/login', function () {
-    return view('login');             
+
+Route::get('/login/fail', function () {
+    return view('auth.fail');
 });
+
+Route::post('/login/check',[AuthController::class, 'check'])->name('auth.check');
+
+// admin
+Route::get('/admin/dashboard',[AdminController::class, 'dashboard'])->name('auth.dashboard');
+
+Route::get('/admin/service',[AdminController::class, 'service'])->name('auth.service');
+
+Route::get('/admin/team',[AdminController::class, 'team'])->name('auth.team');
+
+Route::get('/admin/task',[AdminController::class, 'task'])->name('auth.task');
+
+Route::get('/admin/news',[AdminController::class, 'news'])->name('auth.news');
+
 //Route::get('/login','LoginController@index');
