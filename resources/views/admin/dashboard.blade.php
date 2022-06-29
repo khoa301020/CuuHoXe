@@ -46,7 +46,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="dashboard.php">
+                    <a class="navbar-brand" href="{{ route('admin.dashboard') }}">
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!-- Dark Logo icon -->
@@ -127,31 +127,31 @@
                 <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.php" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.dashboard') }}" aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dichvu.php" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.service') }}" aria-expanded="false">
                                 <i class="fas fa-ambulance" aria-hidden="true"></i>
                                 <span class="hide-menu">Dịch vụ</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="DoiCuuHo.php" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.team') }}" aria-expanded="false">
                                 <i class="fas fa-align-justify" aria-hidden="true"></i>
                                 <span class="hide-menu">Đội cứu hộ</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="NhiemvuCuuHo.php" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.task') }}" aria-expanded="false">
                                 <i class="fas fa-bars" aria-hidden="true"></i>
                                 <span class="hide-menu">Nhiệm vụ cứu hộ</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Tintuc.php" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.news') }}" aria-expanded="false">
                                 <i class="fas fa-clipboard-list" aria-hidden="true"></i>
                                 <span class="hide-menu">Tin tức</span>
                             </a>

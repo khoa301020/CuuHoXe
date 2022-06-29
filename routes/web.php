@@ -60,14 +60,14 @@ Route::get('/login/fail', function () {
 Route::post('/login/check',[AuthController::class, 'check'])->name('auth.check');
 
 // admin
-Route::get('/admin/dashboard',[AdminController::class, 'dashboard'])->name('auth.dashboard');
+Route::get('/admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
 
-Route::get('/admin/service',[AdminController::class, 'service'])->name('auth.service');
+Route::get('/admin/service',[AdminController::class, 'service'])->name('admin.service');
 
-Route::get('/admin/team',[AdminController::class, 'team'])->name('auth.team');
+Route::get('/admin/team',[AdminController::class, 'team'])->name('admin.team');
 
-Route::get('/admin/task',[AdminController::class, 'task'])->name('auth.task');
+Route::get('/admin/task',[AdminController::class, 'task'])->name('admin.task');
 
-Route::get('/admin/news',[AdminController::class, 'news'])->name('auth.news');
+Route::get('/admin/news',[AdminController::class, 'news'])->name('admin.news');
 
 //Route::get('/login','LoginController@index');
