@@ -35,20 +35,25 @@
                                     <div class="ztl-widget-info-image">
                                         <img src="{{asset('public/frontend/images/new-user.png')}}">
                                     </div>
-                                    <span class="ztl-widget-info-description">
-                                        <span style="font-size:12px;color:#f4c70b">ĐĂNG NHẬP</span>
-                                        <br>
-                                        <span style="font-size:20px;font-weight:600">Cứu hộ</span> 
-                                    </span>
+                                    @if(Session::has('LoggedUser'))
+                                        <span class="ztl-widget-info-description">
+                                            <span style="font-size:12px;color:#f4c70b">Xin chào, {{Session::get('LoggedUser')}}</span>
+                                        </span>
+                                    @else
+                                        <span class="ztl-widget-info-description">
+                                            <span style="font-size:18px;font-weight:600"> <a href="{{ route('auth.login') }}">Đăng nhập</a></span>
+                                        </span>
+                                    @endif
                                 </div>
                             </a>
                         {{-- </button> --}}
-                        
+                        @if(Session::has('LoggedUser'))
                         <div class="dropdown-content" style="color: black !important;">
-                            <a href="{{URL::to('/user/profile')}}">Hồ sơ cá nhân</a>
-                            <a href="{{URL::to('/user/request')}}">Yêu cầu</a>
-                            <a href="{{URL::to('/login')}}">Đăng xuất</a>
+                            <a href="{{ route('user.profile') }}">Hồ sơ cá nhân</a>
+                            <a href="{{ route('user.request') }}">Yêu cầu</a>
+                            <a href="{{ route('auth.logout') }}">Đăng xuất</a>
                         </div>
+                        @endif
                     </div>
                 </aside>
             </div>

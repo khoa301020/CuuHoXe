@@ -34,12 +34,18 @@ class AuthController extends Controller
             //check password
             // if (Hash::check($request->password, $userInfo->password)) {
             if ($request->password == $userInfo->password) {
-                // $request->session()->put('LoggedUser', $userInfo->id);
-                return back()->with('success', 'Login success');
+                $request->session()->put('LoggedUser', $userInfo->hoVaTen);
+                return redirect('/');
             } else {
                 // return back()->with('fail', 'Incorrect password');
                 return back()->with('fail', 'Login failed');
             }
         }
+    }
+
+    function logout(Request $request)
+    {
+        $request->session()->forget('LoggedUser');
+        return redirect('/');
     }
 }
