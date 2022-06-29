@@ -177,10 +177,10 @@ svg:not(:root) {
     border-top-right-radius: 2px;
 }
 .r-S3nG {
-    border-color: #ee4d2d;
+    border-color: #19448e;
 }
 .r-S3nG, .vAkdD0:hover {
-    color: #ee4d2d;
+    color: #19448e;
 }
 .vAkdD0 {
     cursor: pointer;
@@ -388,7 +388,7 @@ svg:not(:root) {
 }
 .l4WFo0 {
     line-height: 24px;
-    color: #ee4d2d;
+    color: #19448e;
     text-align: right;
     text-transform: uppercase;
     white-space: nowrap;
@@ -589,7 +589,7 @@ svg:not(:root) {
     color: rgba(0,0,0,.8);
 }
 .TDMlX1 {
-    color: #ee4d2d;
+    color: #19448e;
     font-size: 24px;
     line-height: 30px;
 }
@@ -641,8 +641,8 @@ svg:not(:root) {
     outline: 0;
 }
 .stardust-button--primary {
-    background-color: #ee4d2d;
-    border-color: #cd3011;
+    background-color: #19448e;
+    border-color: #19448e;
     color: #fff;
 }
 .Kz9HeM:not(.stardust-button--primary) {
@@ -949,7 +949,7 @@ svg:not(:root) {
     position: relative;
     overflow: visible;
     outline: 0;
-    background: #ee4d2d;
+    background: #19448e;
 }
 .btn--m {
     height: 40px;
