@@ -10,7 +10,7 @@
     <meta name="keywords" content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
     <meta name="description" content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Ample Admin Lite Template by WrapPixel</title>
+    <title>Nhiệm vụ cứu hộ</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('resources/admin/plugins/images/favicon.png') }}">
@@ -267,23 +267,23 @@
                                                 <th>Mã nhiệm vụ</th>
                                                 <th>Mã sự cố</th>
                                                 <th>Mã đội cứu hộ</th>
-                                                <th>Mã nhân viên</th>
                                                 <th>Thời gian nhận</th>
                                                 <th>Trạng thái</th>
                                                 <th>Thời gian hoàn thành</th>
                                             </tr>
                                             
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                           
+                                            @foreach($tasks as $key => $task)
+                                            <tr>
+                                                <td>{{ $key + 1 }}</td>
+                                                <td>{{ $task->idNhiemVu }}</td>
+                                                <td>{{ $task->idSuCo }}</td>
+                                                <td>{{ $task->idDoiCuuHo }}</td>
+                                                <td>{{ $task->thoiGianNhan }}</td>
+                                                <td>{{ $task->trangThaiNhiemVu }}</td>
+                                                <td>{{ $task->thoiGianHoanThanh }}</td>
+                                            </tr>
+                                            @endforeach
+                                            
                                         </table>
                                     </div>
                                 </div>

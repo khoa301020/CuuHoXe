@@ -10,7 +10,7 @@
     <meta name="keywords" content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
     <meta name="description" content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Ample Admin Lite Template by WrapPixel</title>
+    <title>Quản lý đội cứu hộ</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('resources/admin/plugins/images/favicon.png') }}">
@@ -132,8 +132,8 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li>
-                            <a class="profile-pic" href="#">
-                            <span class="text-white font-medium">Admin</span>
+                            <a class="profile-pic" href="#  ">
+                            <span class="text-white font-medium">{{Session::get('LoggedUser')->hoVaTen}}</span>
                                 <img src="{{ asset('resources/admin/plugins/images/users/varun.jpg') }}" alt="user-img" width="36" class="img-circle"></a>
                         </li>
                         <!-- ============================================================== -->
@@ -242,14 +242,24 @@
                         <th>Thành viên</th>
                         <th>Chi tiết</th>
 					</tr>
-					
-					<tr>
-						<td></td>
-						<td></td>
-                        <td></td>
-                        <td><a href="#">Chi tiết</a></td>
-						<td><a href="#">Xóa</a> || <a href="#">Cập nhật</a></td>
-					</tr>
+                    @foreach($teams as $key => $value)
+                    <tr>
+                        <td>{{ $key+1 }}</td>
+                        <td>{{ $value->idDoiCuuHo }}</td>
+                        <td>{{ $value->tenDoiCuuHo }}</td>
+                        <td>
+                            <?php
+                            // get number of member in team by team id
+                            $numberOfMember = DB::table('team_members')->where('idDoiCuuHo', $value->idDoiCuuHo)->count();
+                            echo $numberOfMember;
+                            ?>
+                        </td>
+                        <td>
+                            <a href="{{ route('admin.dashboard', $value->id) }}" class="btn btn-success">Sửa</a>
+                            <a href="{{ route('admin.team.delete', ['id' => $value->idDoiCuuHo]) }}" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                    @endforeach
 					
 				</table>
 			</div>

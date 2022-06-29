@@ -94,15 +94,15 @@
                         <!-- ============================================================== -->
                         <li class="header_navbar-user">                        
                             
-                            <span class="header_navbar-user-name">Admin</span>
+                            <span class="header_navbar-user-name">{{Session::get('LoggedUser')->hoVaTen}}</span>
                                 <img src="{{ asset('resources/admin/plugins/images/users/varun.jpg') }}" alt="user-img" width="36"
                                     class="img-circle">
                              <ul class="header_navbar-user-menu">
+                                    <!-- <li class="header_navbar-user-item">
+                                        <a href="">Thông tin cá nhân</a>
+                                    </li> -->
                                 <li class="header_navbar-user-item">
-                                    <a href="">Thông tin cá nhân</a>
-                                </li>
-                                <li class="header_navbar-user-item">
-                                    <a href="">Đăng xuất</a>
+                                    <a href="{{ route('auth.logout') }}">Đăng xuất</a>
                                 </li>
                              </ul>       
                         </li>
