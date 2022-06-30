@@ -14,14 +14,14 @@
     }
     .col-lg-12 {
     line-height: 50px;
-    padding: 25px 0;
+    padding: 15px 0;
 }
     .profile_wrapper{
         text-align: center;
     }
     #imagePreview{
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         border:#ccc solid 5px;
         margin-bottom: 20px;
@@ -184,7 +184,7 @@
   <div class="profile-card js-profile-card">
     <div class="profile_img">
     <div>
-                    <img src="{{asset('public/frontend/images/daidien.jpg')}}" alt="Ảnh xem trước" id="imagePreview">
+                    <img src="{{asset('public/frontend/images/profie_img.png')}}" alt="Ảnh đại diện" id="imagePreview">
                 </div>
      
       <div class="imageUpload">
@@ -199,9 +199,9 @@
       <div class="profile-body">
       <form class="form-wrap" action="#">
         <div class="profile-name">
-      <p class="name_user" id="name_user" style="font-size:25px;margin:auto;background:none;margin-left: 45 px;
+      <p class="name_user" id="name_user" style="font-size:25px;margin:auto;background:none;display: inline-flex;
 " >{{Session::get('LoggedUser')->username}}</p>
-<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" style="margin-left: -75px;">
+<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" >
                         <path d="M8.54 0L6.987 1.56l3.46 3.48L12 3.48M0 8.52l.073 3.428L3.46 12l6.21-6.18-3.46-3.48" fill="#9B9B9B" fill-rule="evenodd"></path>
                     </svg>
     </div>                               <div class="row">
